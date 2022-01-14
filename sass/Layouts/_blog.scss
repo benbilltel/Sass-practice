@@ -1,0 +1,92 @@
+.blog {
+  @extend %paddingTopBot;
+  .blog__content {
+    .blog__item {
+        padding: 0 parseRem(30);
+      .blog__img {  
+        position: relative;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .img__text {
+          position: absolute;
+          bottom: 0;
+          left: 0;   
+          padding: parseRem(10);
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          span {
+            @include styleText($color-white-0, parseRem(16), $fw-0);
+          }
+        }
+      }
+      .blogRight__content{
+          padding: parseRem(30) 0;
+          .first__sentence{
+              margin-bottom: parseRem(10);
+              span{
+                word-spacing: parseRem(10);
+                  a{
+                    @include styleText ($color-gray-4,parseRem(12),$fw-0);
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    transition: .5s;
+                    &:hover{
+                        color: $color-gold-0;
+                    }
+                  }
+                  
+              }
+          }
+          .second__sentence{
+              margin-bottom: parseRem(10);
+              a{
+                  @include styleText($color-black-3,parseRem(18),$fw-0);
+                  text-decoration: none;
+                  transition: .5s;
+                  letter-spacing: 1px;
+                  &:hover{
+                      color: $color-gold-0; 
+                  }
+              }
+          }
+          .third__sentence{
+              margin-bottom: parseRem(25);
+              span{
+                  @include styleText($color-gray-4,parseRem(12),$fw-0);
+                  letter-spacing: 2px;
+                  a{
+                    @include styleText($color-gray-4,parseRem(12),$fw-0);
+                    letter-spacing: 2px;
+                    text-decoration: none; 
+                    transition: .5s;
+                    &:hover{
+                        color: $color-gold-0;
+                    }
+                  }
+              }
+          }
+          .blog__text{
+              margin-bottom: parseRem(30);
+              color: $color-black-2;
+              line-height: parseRem(30);
+          }
+          .blog__link{
+              a{
+                  color: $color-gray-5;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  &:hover{
+                      color: $color-black-3;
+                  }
+              }
+          }
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+.skill {
+  .skill__top {
+    @extend %paddingTopBot;
+    .skillTop__content {
+      width: 90%;
+      margin: auto;
+      .skill__content {
+        .skill__item {
+          padding-left: parseRem(30);
+          padding-right: parseRem(30);
+          .skillItem__content {
+            position: relative;
+            padding: parseRem(30);
+            border: 1px solid $color-gray-0;
+            border-radius: 4px;
+            text-align: left;
+            &:hover .skill__icon {
+              background-color: $color-gold-0;
+            }
+            .skill__icon {
+              i {
+                font-size: parseRem(25);
+                line-height: parseRem(60);
+              }
+              position: absolute;
+              top: -30px;
+              left: 30px;
+              width: 60px;
+              height: 60px;
+              text-align: center;
+              border-radius: 4px;
+              background: $color-black-3;
+              box-shadow: 0 0 0 10px $color-white-0;
+              color: $color-white-0;
+              transition: all 0.5s;
+            }
+            .skill__title {
+              display: inline-block;
+              margin-top: parseRem(30);
+              text-transform: uppercase;
+              h4 {
+                margin-bottom: parseRem(20);
+                letter-spacing: 1px;
+                font-weight: $fw-0;
+                font-size: parseRem(18);
+              }
+            }
+            .skill__desc {
+              color: $color-black-2;
+            }
+          }
+        }
+      }
+    }
+  }
+  .skill__bot {
+    background-image: url(../img/skillbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 657px;
+    position: relative;
+    .skill__overplay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $color-dark-overplay;
+    }
+    .container {
+      height: 100%;
+      .skillBot__content {
+        height: 100%;
+        .skillBot__item {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          &.skill__left {
+            justify-content: end;
+            h3 {
+              margin-right: 100px;
+              color: $color-white-0;
+              letter-spacing: 6px;
+              font-size: parseRem(24);
+            }
+          }
+          &.skill__right {
+            color: white;
+            z-index: 2;
+            justify-content: start;
+            padding: 0px 60px;
+            text-align: start;
+            h4 {
+              font-size: parseRem(18);
+              margin-bottom: parseRem(30);
+              letter-spacing: 2px;
+            }
+            p {
+              line-height: parseRem(30);
+              margin-bottom: parseRem(30);
+              font-size: parseRem(15);
+            }
+            .skillExp {
+              padding-top: parseRem(30);
+
+              .progress {
+                height: parseRem(20);
+                margin-top: parseRem(10);
+                margin-bottom: parseRem(50);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                border-radius: 0;
+                background: $color-gray-1;
+                font-weight: $fw-0;
+                overflow: visible;
+                .progress-bar {
+                  position: relative;
+                  padding-top: 0;
+                  padding-left: 10px;
+                  text-align: left;
+                  background-color: $color-white-0;
+                  box-shadow: none;
+                  line-height: 20px;
+                  overflow: visible;
+                  .name-skill {
+                    font-size: parseRem(10);
+                    color: $color-black-3;
+                  }
+                  .per-exp {
+                    position: absolute;
+                    top: -28px;
+                    right: -5px;
+                    display: inline-block;
+                    min-width: parseRem(25);
+                    height: parseRem(20);
+                    padding: 0 parseRem(8);
+                    text-align: center;
+                    border-radius: parseRem(20);
+                    color: $color-black-3;
+                    background-color: $color-gray-2;
+                    line-height: parseRem(20);
+                    font-size: parseRem(10);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive("ipad") {
+    .skill__top {
+      .skill__content {
+        .skill__item {
+          margin-bottom: 50px;
+        }
+      }
+    }
+    .skill__bot {
+      height: 1024px;
+      .skill__overplay {
+        display: none;
+      }
+      .container {
+        .skillBot__content {
+          .skillBot__item {
+            &.skill__left {
+              justify-content: center;
+              h3 {
+                margin-right: 0;
+                letter-spacing: 4px;
+                font-size: parseRem(18);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.number{
+    background-color: $color-black-6;
+    @extend %paddingTopBot;
+    .number__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .number__link{
+            text-align: center;
+            color: $color-white-0;
+            span{
+                margin-bottom: parseRem(10);
+                font-size: parseRem(36);
+                padding-left: parseRem(10);
+                i{
+                    font-size: parseRem(36);
+                }
+            }
+            h4{
+                font-size: $fs-default * 1px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin:parseRem(10) 0 0 ;
+            }
+        }
+    }
+}

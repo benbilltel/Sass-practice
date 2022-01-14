@@ -1,0 +1,118 @@
+footer {
+  .footer__top {
+    padding: parseRem(80) 0;
+    background-color: $color-black-3;
+    .footerTop__item {
+      padding: 0 parseRem(30);
+      & > a {
+        margin-bottom: parseRem(20);
+        img {
+          height: 115px;
+          width: auto;
+        }
+      }
+      & > p {
+        margin-bottom: parseRem(30);
+        color: $color-black-2;
+        line-height: parseRem(30);
+      }
+      h5 {
+        color: $color-white-0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: parseRem(14);
+        margin-bottom: parseRem(30);
+      }
+      .item__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          padding: parseRem(10) 0;
+          border-bottom: 1px solid $color-black-5;
+          &:hover a span {
+            color: $color-gold-0;
+          }
+          a {
+            text-decoration: none;
+            span {
+              color: $color-gray-9;
+              margin-right: parseRem(10);
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      .list__img {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+          width: 55px;
+          height: 55px;
+          margin: 0 parseRem(10) parseRem(10) 0;
+          float: left;
+          @include responsive("laptop") {
+            margin: 0 parseRem(5) parseRem(5) 0;
+          }
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .footer__bot {
+    width: 100%;
+    padding: 35px 0;
+    border-top: 1px solid $color-black-7;
+    background: $color-black-8;
+    font-weight: normal;
+    .footerBot__item {
+      padding: 0 parseRem(30);
+      span {
+        margin-top: parseRem(10);
+        color: $color-gray-10;
+        a {
+          color: $color-white-0;
+          text-decoration: none;
+          &:hover {
+            color: $color-gold-0;
+          }
+        }
+      }
+      &.footerBot__item:nth-child(2) {
+        display: flex;
+        justify-content: end;
+        @include responsive("ipad"){
+          justify-content: start;
+        }
+      }
+      .item__social {
+        a {
+          display: inline-block;
+          border: 1px solid $color-gray-11;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          line-height: 38px;
+          text-align: center;
+          margin-right: parseRem(15);
+
+          &:hover {
+            border-color: transparent;
+            background-color: $color-gray-11;
+          }
+          &:hover i {
+            color: $color-white-0;
+          }
+          i {
+            color: $color-gray-11;
+            font-size: parseRem(20);
+          }
+        }
+      }
+    }
+  }
+}

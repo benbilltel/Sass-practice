@@ -1,0 +1,156 @@
+.team {
+  @extend %paddingTopBot;
+  .team__info {
+    .team__item {
+      padding: 0 parseRem(30);
+      .team__member {
+        position: relative;
+        &:hover .team__overplay{
+            opacity: 1;
+        }
+        &:hover .team__overplay .member__title,&:hover .team__overplay .member__info{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .team__img {
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+          .img__info {
+            position: absolute;
+            right: 0;
+            bottom: 30px;
+            width: 70%;
+            padding: parseRem(10) parseRem(20);
+            text-align: right;
+            background: rgba(0, 0, 0, 0.7);
+            h5 {
+              margin-bottom: 0;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: $color-white-0;
+              @include responsive("laptop"){
+                font-size: parseRem(16);
+              }
+            }
+            span {
+              margin-bottom: 0;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: rgba(255, 255, 255, 0.5);
+              font-size: parseRem(12);
+            }
+          }
+        }
+        .team__overplay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: 0;
+          transition: all 0.3s;
+            opacity: 0;
+          border: 20px solid rgba(0, 0, 0, 0.1);
+          background-color: rgba(255, 255, 255, 0.9);
+          .member__title {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            padding: 0 parseRem(20);
+            transition: all 0.3s 0.2s;
+            text-align: center;
+            color: $color-black-3;
+            transform: translateY(-55%);
+            opacity: 0;
+            h4 {
+              margin-bottom: parseRem(25);
+              letter-spacing: 4px;
+              text-transform: uppercase;
+              font-size: parseRem(14);
+            }
+            p{
+                margin-bottom: parseRem(30);
+                color: $color-black-2;
+                font-size: parseRem(14);
+                font-weight:$fw-0;
+                line-height:parseRem(30);
+            }
+
+          }
+          .member__info{
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            transition: all .3s .2s;
+            transform: translateY(45%);
+            text-align: center;
+            opacity: 0;
+            a{
+                margin: 0 parseRem(10);
+                &:hover i{
+                    color: $color-gold-0;
+                }
+                i{
+                    color: $color-black-3;
+                    text-align: center;
+                    font-size: parseRem(16);
+                    transition: all .5s;
+                }
+            }
+          }
+        }
+        
+      }
+      .promo__content{
+          background-color: $color-white-1;
+          margin-top: 100px;
+          padding: parseRem(40);
+          display:flex ;
+          align-items: center;
+          justify-content: space-between;
+          .promo__info{
+              h4{
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom:  0 ;
+                color: $color-black-5;
+                font-weight: normal;
+                line-height: 1.5;
+                font-size: parseRem(18);
+                span{
+                    font-size: parseRem(18);
+                    color: $color-gold-0;
+                }
+              }
+              p{
+                margin-top: parseRem(10);
+                color: $color-black-2;
+              }
+          }
+          .promo__button{
+              button{
+                color: $color-white-0;
+                background-color: $color-black-3;
+                padding: parseRem(15) parseRem(30);
+                border: none;
+                text-transform: uppercase;
+                font-size: parseRem(16);
+                transition: .5s;
+                @include responsive("laptop"){
+                  font-size: parseRem(14);
+                }
+                &:hover{
+                    background-color: $color-gold-0;
+                }
+              }
+          }
+      }
+    }
+  }
+}

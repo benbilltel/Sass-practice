@@ -1,0 +1,24 @@
+@function parseRem($size) {
+  $valCurrent: $size / $fs-default;
+  @debug $valCurrent;
+  @return ($valCurrent * 1rem);
+}
+@mixin styleText($color, $fs, $fw) {
+  font-size: $fs;
+  color: $color;
+  font-weight: $fw;
+}
+// responsive
+@mixin responsive($screen) {
+  @if map-has-key($map: $breakpoint, $key: $screen) {
+    $val: map-get(
+      $map: $breakpoint,
+      $key: $screen,
+    );
+    @media screen and (max-width: $val) {
+      @content;
+    }
+  } @else {
+    @warn "`{$screen}` is not exist in breakpoints";
+  }
+}

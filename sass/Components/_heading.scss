@@ -1,0 +1,38 @@
+.heading {
+  margin-bottom: parseRem(80);
+  text-align: center;
+  h3 {
+    letter-spacing: 2px;
+    font-weight: $fw-0;
+    color: $color-black-0;
+    position: relative;
+    text-transform: uppercase;
+    margin: 0 0 parseRem(20);
+    padding: 0 0 parseRem(10);
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -2px;
+      left: 50%;
+      width: parseRem(60);
+      height: 2px;
+      margin-left: parseRem(-31);
+      background: $color-black-1;
+    }
+  }
+  p {
+    display: inline-block;
+    width: 60%;
+    margin: 0 auto;
+    color: $color-black-2;
+    line-height: parseRem(25);
+  }
+  @include responsive("ipad"){
+    h3{
+      font-size: parseRem(18);
+    }
+    p{
+      width: 80%;
+    }
+  }
+}

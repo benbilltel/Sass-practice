@@ -1,0 +1,49 @@
+.feedback {
+  @extend %paddingTopBot;
+  .feedback__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .feedback__owl {
+      width: 65%;
+      margin: auto;
+      text-align: center;
+      @include responsive("ipad"){
+        width: 100%;
+      }
+      .item {
+        margin: parseRem(20);
+        .feedbackItem__content {
+          & > span {
+              display: flex;
+              justify-content: center;
+              margin-bottom: parseRem(20);
+            img {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+            }
+          }
+          p{
+              @include styleText($color-black-2,parseRem(16),$fw-2);
+              font-style: italic;
+              line-height: parseRem(30);
+              margin-bottom: parseRem(30);
+          }
+          .feedback__name{
+              span:first-child{
+                margin-top: parseRem(10);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                @include styleText($color-black-3,parseRem(14),$fw-0);
+              }
+              span:last-child{
+                  @include styleText($color-gray-6,parseRem(12),$fw-0);
+                  text-transform: uppercase;
+              }
+          }
+        }
+      }
+    }
+  }
+}

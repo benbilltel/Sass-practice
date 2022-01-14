@@ -1,0 +1,127 @@
+.showcase {
+  .showcase__top {
+    padding-top: 100px;
+  }
+  .showcase__bot {
+    width: 100%;
+    .nav-tabs {
+      width: 40%;
+      margin: 0 auto parseRem(50);
+      border: none;
+      @include responsive("ipad"){
+        width: 80%;
+      }
+      @include responsive("iphone-8plus"){
+        width: 100%;
+      }
+      .nav-item {
+        @include responsive("iphone-8plus"){
+          margin: 0 15px;
+          padding: 0;
+        }
+        .nav-link {
+          border: none;
+          text-transform: uppercase;
+          margin: 0 parseRem(3);
+          letter-spacing: 3px;
+          color: $color-gray-3;
+          font-size: 14px;
+          transition: 0.5s;
+          
+          &.active {
+            color: $color-black-3;
+          }
+          &:hover {
+            color: $color-black-3;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 100%;
+      .showcase__content {
+        width: 100%;
+        .row {
+          width: 100%;
+          .showcase__item {
+            position: relative;
+            padding: 0;
+            img {
+              width: 100%;
+              height: 100%;
+              display: inline-block;
+            }
+            .item__overplay {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              transition: all 0.5s;
+              opacity: 0;
+              border: 20px solid rgba(0, 0, 0, 0.1);
+              background-color: rgba(255, 255, 255, 0.9);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: 0.5s;
+              &:hover {
+                opacity: 1;
+              }
+              div {
+                text-align: center;
+                a {
+                  i {
+                    color: $color-black-3;
+                    font-size: parseRem(25);
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateY(-100%);
+                  }
+                }
+                h4 {
+                  margin: parseRem(20) 0 parseRem(15);
+                  a {
+                      display: inline-block;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $color-black-3;
+                    letter-spacing: 3px;
+                    line-height: 1.5;
+                    font-size: parseRem(14);
+                    transform: translateY(100%);
+                    opacity: 0;
+                    font-weight: $fw-0;
+                    transition: 0.5s;
+                    &:hover {
+                      color: $color-gold-0;
+                    }
+                  }
+                }
+                p {
+                  letter-spacing: 3px;
+                  font-weight: $fw-0;
+                  font-size: parseRem(12);
+                  opacity: 0;
+                  transform: translateY(100%);
+                  transition: 0.5s;
+                  cursor: pointer;
+                  &:hover {
+                    color: $color-gold-0;
+                  }
+                }
+              }
+              &:hover div .overplay__icon i,&:hover div .overplay__title,&:hover div p {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

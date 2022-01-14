@@ -1,0 +1,71 @@
+.benefit {
+  background-image: url(../img/pattern-2.png);
+  .container {
+    @extend %paddingTopBot;
+  }
+  .nav-tabs {
+    border: none;
+    .nav-item {
+      background-color: rgba(34, 34, 34, 0.05);
+      padding: 0;
+      margin-right: parseRem(20);
+      position: relative;
+      .nav-link {
+        width: 100%;
+        padding: parseRem(35) parseRem(70);
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        transition: .5s;
+        &:hover{
+            background-color: $color-white-0;
+        }
+        &.active::after{
+            opacity: 1;
+        }
+        &:hover::after{
+            opacity: 1;
+        }
+        &::after{
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -10px;
+            content: "";
+            border-color: $color-white-0 transparent transparent transparent;
+            opacity: 0;
+            border-width: 10px 10px 0px 10px;
+            border-style: solid;
+            transition: .5s;
+        }
+        i {
+          font-size: parseRem(36);
+          color: $color-black-0;
+        }
+      }
+    }
+  }
+  .tab-pane{
+      .tab__content{
+          padding: parseRem(30) 0;
+          margin-left: parseRem(-12);
+          @include responsive("iphone-8plus"){
+            margin-left: 0;
+            padding: parseRem(30) parseRem(5);
+          }
+          span{
+              @include styleText($color-black-2,parseRem(14),$fw-0);
+              letter-spacing: 2px;
+              margin-bottom: parseRem(15);
+              display: inline-block;
+          }
+          h2{
+              margin-bottom:parseRem(50) ;
+              letter-spacing: 2px;
+              @include styleText($color-black-5,parseRem(30),$fw-0);
+          }
+      }
+  }
+}

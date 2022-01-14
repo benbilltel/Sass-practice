@@ -1,0 +1,91 @@
+.header__start {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  transition: 0.5s;
+  .navbar {
+    padding: parseRem(10);
+    .navbar-brand {
+      img {
+        height: 96px;
+        width: auto;
+        transition: 0.5s;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        margin-left: parseRem(2);
+        .nav-link {
+          text-transform: uppercase;
+          color: $color-white-0;
+          font-size: parseRem(13);
+          padding: 0 parseRem(12);
+          font-weight: $fw-0;
+          transition: all 0.5s;
+          letter-spacing: 1px;
+          &:hover {
+            color: $color-gold-0;
+          }
+          &.active {
+            color: $color-gold-0;
+          }
+        }
+      }
+    }
+  }
+}
+#header__overplay {
+  @include responsive("laptop") {
+    #myNavBar {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            padding: 0 parseRem(4);
+          }
+        }
+      }
+    }
+  }
+  @include responsive("ipad") {
+    background-color: $color-black-0;
+    border-bottom: 1px solid $color-white-0;
+    .navbar-nav {
+      background-color: $color-white-0;
+      .nav-item {
+        margin: 0;
+        width: 100%;
+        padding: parseRem(15) 0;
+        &.nav__item__8 {
+          display: none;
+        }
+        border-bottom: 1px solid $color-gray-8;
+        .nav-link {
+          color: $color-black-0;
+          &:hover {
+            color: $color-gold-0;
+          }
+          &.active {
+            color: $color-gold-0;
+          }
+        }
+      }
+    }
+    #myNavBar {
+      padding: 0;
+      #logo {
+        height: 50px;
+      }
+      #navbar-toggler {
+        width: 50px;
+        height: 50px;
+        i {
+          color: $color-white-0;
+          font-size: parseRem(25);
+        }
+      }
+    }
+  }
+}

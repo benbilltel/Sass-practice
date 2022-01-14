@@ -1,0 +1,10 @@
+.partner{
+    @extend %paddingTopBot;
+    border-top: 1px solid $color-gray-8;
+    .item{
+        img{
+            width: 100%;
+        }
+    }
+    
+}

@@ -1,0 +1,40 @@
+.cover {
+  background-image: url(../img/index-banner-2.jpg);
+  height: 746px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .cover__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white-0;
+    text-align: center;
+    h1 {
+      letter-spacing: 5px;
+      font-size: parseRem(60);
+      font-weight: $fw-1;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    h3 {
+      letter-spacing: 6px;
+      font-size: parseRem(20);
+      text-transform: uppercase;
+    }
+  }
+  @include responsive("ipad"){
+    height: 1024px;
+    .cover__content{
+      h1{
+        font-size: parseRem(30);
+      }
+      h3{
+        font-size: parseRem(18);
+      }
+    }
+  }
+}

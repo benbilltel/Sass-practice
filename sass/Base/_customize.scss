@@ -1,0 +1,21 @@
+::selection {
+  color: $color-white-0;
+  background: $color-gold-0;
+  text-shadow: none;
+}
+.feedback {
+  .owl-theme {
+    .owl-dots {
+      .owl-dot {
+        &.active span,&:hover span{
+          opacity: 1;
+        }
+        span {
+          opacity: 0.5;
+          background-color: $color-gray-7;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}

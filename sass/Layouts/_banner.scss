@@ -1,0 +1,50 @@
+.banner{
+    padding: 150px 0;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .banner__content{
+            text-align: center;
+            .banner__text{
+                h5{
+                    color: $color-gold-0;
+                    font-size: parseRem(16);
+                    letter-spacing: 3px;
+                    @include responsive ("ipad"){
+                        font-size: parseRem(14);
+                    }
+                }
+                h1{
+                    font-size: parseRem(36);
+                    color: $color-white-0;
+                    letter-spacing: 2px;
+                    margin-bottom: parseRem(30);
+                    @include responsive ("ipad"){
+                        font-size: parseRem(24);
+                    }
+                }
+            }
+            .banner__button{
+                button{
+                    font-size: parseRem(14);
+                    padding: parseRem(15) parseRem(30);
+                    text-transform: uppercase;
+                    color: $color-white-0;
+                    background-color: $color-gold-0;
+                    border: none;
+                    letter-spacing: 1px;
+                    &:hover{
+                        color: $color-black-3;
+                        background-color: $color-white-0;
+                    }
+                }
+            }
+        }
+    }
+}
